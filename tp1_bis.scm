@@ -162,12 +162,79 @@
       (cons (f (car L)) (mapkar f (cdr L)))))
 
 (mapkar carre '(1 5 6 8))
+(mapkar sqrt '(1 5 6 8))
+(mapkar (lambda (x) (+ x 3)) '(1 5 6 8))
+
+(define (insertionNb L x)
+  (if (null? L)
+      (list x) 
+      (if (< (car L) x)
+          (cons (car L) (insertionNb (cdr L) x))
+          (cons x L))))
+
+(define (tri_InsNb L)
+  (if (null? L)
+      ()
+      (insertionNb (tri_InsNb (cdr L)) (car L))))
+
+(define (insertionString L x)
+  (if (null? L)
+      (list x) 
+      (if (string<? (car L) x)
+          (cons (car L) (insertionString (cdr L) x))
+          (cons x L))))
+
+(define (tri_InsString L)
+  (if (null? L)
+      ()
+      (insertionString (tri_InsString (cdr L)) (car L))))
+
+(tri_InsNb '(8 4 5 1 2))
+(tri_InsString '("yoyo" "salut" "azerty"))
+
+(define (insertion_Type L x f)
+  (if (null? L)
+      (list x) 
+      (if (f (car L) x)
+          (cons (car L) (insertion_Type (cdr L) x f))
+          (cons x L))))
+
+(define (tri_Ins_Type L f)
+  (if (null? L)
+      ()
+      (insertion_Type (tri_Ins_Type (cdr L) f) (car L) f)))
+
+(define (Comp_Pers_Taille p1 p2)
+   (< (caddr p1) (caddr p2)))
+
+(define (Comp_Pers_Age p1 p2)
+  (< (cadr p1) (cadr p2)))
+
+(define (Comp_Pers_Nom p1 p2)
+  (string<? (car p1) (car p2)))
+
+(tri_Ins_Type '(("toto" 22 180) ("titi" 10 150)) Comp_Pers_Age)
+
+;; Tx = (f(x+h) - f(x-h))/ 2h
+
+(define h 0.001)
+
+(define (deriv f h)
+  (lambda (x)
+    (/ (- (f (+ x h)) (f (- x h))) (* 2 h))))
+
+((deriv (lambda (x) (sqrt x))) 8)
 
 
+;; fog : x -> f(g(x))
+
+(define (fog f g)
+     (lambda (x)
+       (f (g x))))
+
+((fog (lambda (x) (sqrt x)) (lambda (x) (* x x))) 5)
 
           
-                  
-  
 
 
 
