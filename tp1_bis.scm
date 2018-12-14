@@ -235,8 +235,45 @@
 ((fog (lambda (x) (sqrt x)) (lambda (x) (* x x))) 5)
 
           
+(define (mapkar f L)
+  (if (null? L)
+      ()
+      (cons (f (car L)) (mapkar f (cdr L)))))
 
 
+(map carre '(6 7 4 3))
+
+(define mapkan
+  (lambda (f L)
+    (if (null? L)
+        ()
+        (append (f (car L)) (mapkan f (cdr L))))))
+
+(mapkan (lambda (x)
+          (if (integer? x)
+              (list x)
+              ())) '(a 5 2 3 t))
+
+;; map existe deja voir cours
+;; append-map
 
 
+;;EXERCICE 4
 
+(define (PC E n)
+  (if (= n 0)
+     '(())
+     (let ((PCN1 (PC E (- n 1))))   ;; EVITE DE RECALCULER POUR CHAQUE E
+         (append-map (lambda (z) (cons_each z PCN1)) E))))
+     
+(define (prod_cart E n)
+  (if (null? E)
+      ()
+      (PC E n)))
+
+(define (cons_each x L)
+  (if (null? L)
+      '()
+      (cons (cons x (car L)) (cons_each x (cdr L)))))
+
+(prod_cart '(0 1) 2)
