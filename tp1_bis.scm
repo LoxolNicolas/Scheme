@@ -274,6 +274,61 @@
 (define (cons_each x L)
   (if (null? L)
       '()
-      (cons (cons x (car L)) (cons_each x (cdr L)))))
+     (cons (cons x (car L)) (cons_each x (cdr L)))))
 
 (prod_cart '(0 1) 2)
+
+;;EXERCICE 8
+
+(cons_each 2 '((1) (2) (3)))
+
+(define (P E)
+  (if (null? E)
+      '(())
+      (let ((PCN1 (P (cdr E))))
+        (append PCN1 (map (lambda (z) (cons (car E) z)) PCN1)))))
+
+(P '(1 2 3))
+
+;;EXERCICE 6
+
+(define (retire M)
+  (if (null? M)
+      '()
+      (cons (cdr (car L)) (retire (cdr L)))))
+
+
+(define (tr M)
+  (if (null? M)
+      0
+      (+ (caar M) (tr (map cdr (cdr M))))))
+
+(tr '((1 2 3) (4 5 6) (7 8 9)))
+
+
+(define (transposee M)
+  (if (null? (car M))
+      '()
+      (cons (map car M) (transposee (map cdr M)))))
+
+(transposee '((1 2 3) (4 5 6) (7 8 9)))
+
+(map list '(1 2 3) '(4 5 6) '(7 8 9))
+
+(define (Produit_Ligne v1 v2)
+  (if (or (null? v1) (null? v2))
+      0
+      (+ (* (car v1) (car v2)) (Produit_Ligne (cdr v1) (cdr v2)))))
+
+(define (produit_Matrice M v)
+  (if (null? M)
+      0
+      (+ (Produit_Ligne (car M) v) (Produit_Matrice (cdr M) v))))
+
+
+(produit_Matrice '((1 2 3) (4 5 6) (7 8 9)) '(1 1 1))
+
+
+
+
+
