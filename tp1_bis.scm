@@ -315,18 +315,101 @@
 
 (map list '(1 2 3) '(4 5 6) '(7 8 9))
 
-(define (Produit_Ligne v1 v2)
-  (if (or (null? v1) (null? v2))
-      0
-      (+ (* (car v1) (car v2)) (Produit_Ligne (cdr v1) (cdr v2)))))
-
 (define (produit_Matrice M v)
-  (if (null? M)
-      0
-      (+ (Produit_Ligne (car M) v) (Produit_Matrice (cdr M) v))))
+  (if (or (null? M) (null? v))
+      '()
+      (map (lambda(z) (apply + (map * z v))) M)))
 
 
-(produit_Matrice '((1 2 3) (4 5 6) (7 8 9)) '(1 1 1))
+;;EXERCICE SR
+
+(define SR (lambda (L I R)
+             (if (null? L) I
+                 (R (car L) (SR (cdr L) I R)))))
+
+
+(define (max L)
+  (if (null? L)
+      "Liste vide"
+    (SR (cdr L) (car L) (lambda (Tete RR) ;;RR = resultat sur le reste
+                    (if (> Tete RR)
+                        Tete
+                        RR)))))
+
+(max '(1 5 6 9 8))
+
+;;EXERCICE 1A
+
+(define existe?
+  (lambda (L P)
+    (if (null? L)
+        #f
+        (or (P (car L))
+            (existe? (cdr L) P)))))
+
+(define (tous_egaux_exi? L)
+  (not (existe? (cdr L) (lambda (z)
+               (not (= (car L) z))))))
+
+(tous_egaux_exi? '(5 5 5))
+
+;;EXERCICE 1B
+
+(define quel_que_soit?
+  (lambda (L P)
+    (if (null? L)
+        #t
+        (and (P (car L))
+             (quel_que_soit? (cdr L) P)))))
+
+(define (tous_egaux_uni? L)
+  (quel_que_soit? (cdr L) (lambda (z)
+                            (= (car L) z))))
+
+(tous_egaux_uni? '(7 7 7))
+
+;;EXERCICE 2.1
+
+(define (rec U0 UN n)
+  (if (= n 0)
+      U0
+      (UN (rec U0 UN (- n 1)) n)))
+
+(rec 0 (lambda (UN_1 n) (+ UN_1 n) ) 4)
+
+;;EXERCICE 3
+
+(define (reflexive E R)
+  (quel_que_soit? E (lambda (x)
+                      (R x x))))
+
+(define (symetrique E R)
+                   (quel_que_soit? E
+                                   (lambda (x)
+                                       (quel_que_soit? E
+                                        (lambda (y)
+                                         (or (not (R x y)) (R y x)))))))
+
+(symetrique '(1 2 3) =)
+
+(define (transitive E R)
+                   (quel_que_soit? E
+                                   (lambda (x)
+                                       (quel_que_soit? E
+                                        (lambda (y)
+                                          (quel_que_soit? E
+                                                          (lambda (z)
+                                                                            (or (not (R x y)) (not (R y x)) (R x y))))))))))
+
+                                         
+
+
+  
+                         
+
+                    
+
+
 
 
 
