@@ -1,0 +1,24 @@
+site_name: C++
+site_url: https://example.com/
+#repo_url:
+#edit_uri_template:
+
+nav:
+  - Home : index.md
+
+#theme: material
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - c
+        - cpp
+        - python
+        - bash
+    logo: img/C++.png
+
+plugins:
+  - mermaid2 #Graph
+  - macros   #Variable
+  - search   #Search
