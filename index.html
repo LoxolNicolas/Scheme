@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://example.com/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>C++</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/";
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/c.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".">
+          <img src="img/C++.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#compiler">Compiler</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ide">IDE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-control">Version control</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debugger">Debugger</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#analysing-and-code-formatting">Analysing and code formatting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation-generator">Documentation generator</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#packet-manager">Packet manager</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build-system">Build system</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#profiler">Profiler</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-coverage">Code coverage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#libraries">Libraries</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">C++</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="c-development-environment">C++ development environment</h1>
+<hr />
+<h2 id="compiler">Compiler</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://gcc.gnu.org/">GCC</a></strong></td>
+<td align="center">The GNU Compiler Collection (GCC) is an optimizing compiler produced by the GNU Project supporting various programming languages, hardware architectures and operating systems</td>
+<td align="center"><code>GPL</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022">MSbuild</a></strong></td>
+<td align="center">Microsoft Build Engine, or MSBuild, is a set of free and open-source build tools for managed code under the Common Language Infrastructure as well as native C and C++ code</td>
+<td align="center"><code>MIT</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://clang.llvm.org/">Clang</a></strong></td>
+<td align="center">Clang is a compiler front end for the C, C++, Objective-C, and Objective-C++ programming languages</td>
+<td align="center"><code>Apache</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ide">IDE</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://visualstudio.microsoft.com/">Visual studio</a></strong></td>
+<td align="center">Visual Studio is an integrated development environment (IDE) from Microsoft</td>
+<td align="center"><code>Freemium</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://code.visualstudio.com/">Visual studio code</a></strong></td>
+<td align="center">Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS</td>
+<td align="center"><code>MIT</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="version-control">Version control</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://git-scm.com/">Git</a></strong></td>
+<td align="center">Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development</td>
+<td align="center"><code>GPL</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://subversion.apache.org/">Subversion</a></strong></td>
+<td align="center">Apache Subversion (often abbreviated SVN, after its command name svn) is a software versioning and revision control system distributed as open source under the Apache License</td>
+<td align="center"><code>Apache</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="debugger">Debugger</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://learn.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=vs-2022">Visual studio debugger</a></strong></td>
+<td align="center">The debugger tools provided by Visual Studio</td>
+<td align="center"><code>Freemium</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://man7.org/linux/man-pages/man1/gdb.1.html">GDB</a></strong></td>
+<td align="center">The GNU Debugger (GDB) is a portable debugger that runs on many Unix-like systems and works for many programming languages, including Ada, C, C++</td>
+<td align="center"><code>GPL</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="analysing-and-code-formatting">Analysing and code formatting</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://clang.llvm.org/extra/clang-tidy/">Clang-Tidy</a></strong></td>
+<td align="center">Clang-tidy is a clang-based C++ “linter” tool. Its purpose is to provide an extensible framework for diagnosing and fixing typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis</td>
+<td align="center"><code>Apache</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a></strong></td>
+<td align="center">ClangFormat describes a set of tools that are built on top of LibFormat. It can support your workflow in a variety of ways including a standalone tool and editor integrations</td>
+<td align="center"><code>Apache</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="documentation-generator">Documentation generator</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://www.doxygen.nl/">Doxygen</a></strong></td>
+<td align="center">Doxygen is a documentation generator and static analysis tool for software source trees</td>
+<td align="center"><code>GPL</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://www.mkdocs.org/">MkDocs</a></strong></td>
+<td align="center">MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation</td>
+<td align="center"><code>BSD</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="packet-manager">Packet manager</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://conan.io/">Conan</a></strong></td>
+<td align="center">Decentralized, open-source, C/C++ package manager</td>
+<td align="center"><code>MIT</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://vcpkg.io/en/index.html">vcpkg</a></strong></td>
+<td align="center">A C++ package manager for Windows, Linux, and macOS</td>
+<td align="center"><code>MIT</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="build-system">Build system</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://cmake.org/">CMake</a></strong></td>
+<td align="center">In software development, CMake is cross-platform free and open-source software for build automation, testing, packaging and installation of software by using a compiler-independent method</td>
+<td align="center"><code>BSD</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="profiler">Profiler</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://valgrind.org/">Valgrind</a></strong></td>
+<td align="center">Valgrind is a programming tool for memory debugging, memory leak detection, and profiling</td>
+<td align="center"><code>GNU</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://github.com/gperftools/gperftools">gperftools</a></strong></td>
+<td align="center">gperftools is a collection of a high-performance multi-threaded malloc() implementation, plus some pretty nifty performance analysis tools</td>
+<td align="center"><code>BSD</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="code-coverage">Code coverage</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Description</th>
+<th align="center">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><a href="https://gcc.gnu.org/onlinedocs/gcc/Gcov.html">gcov</a></strong></td>
+<td align="center">Gcov is a source code coverage analysis and statement-by-statement profiling tool</td>
+<td align="center"><code>GNU</code></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="https://github.com/OpenCppCoverage/OpenCppCoverage">OpenCppCoverage</a></strong></td>
+<td align="center">OpenCppCoverage is an open source code coverage tool for C++ under Windows</td>
+<td align="center"><code>GNU</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="libraries">Libraries</h2>
+<hr />
+<ul>
+<li><a href="https://en.cppreference.com/w/cpp/links/libs">A list of open source C++ libraries</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/links/libs">A list of open source C libraries</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.4.3
+Build Date UTC : 2023-06-20 19:08:20.717508+00:00
+-->
